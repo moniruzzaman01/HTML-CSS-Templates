@@ -1,0 +1,115 @@
+/* global css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    ;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* navbar */
+.navbar{
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 4px 1px #fff,
+                0 0 8px 1px #fff;
+}
+.navbar .brand a{
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all 0.5s;
+    ;
+}
+.hamburger{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: #fff;
+    box-shadow: 0 0 2px 1px #fff;
+    ;
+}
+.hamburger span{
+    height: 3px;
+    width: 25px;
+    background-color: #000;
+    cursor: pointer;
+    ;
+}
+.hamburger span::after,
+.hamburger span::before{
+    content: '';
+    height: 3px;
+    width: 25px;
+    position: absolute;
+    background-color: #000;
+    ;
+}
+.hamburger span::before{
+    transform: translateY(-8px);
+}
+.hamburger span::after{
+    transform: translateY(8px);
+}
+/* navmenu */
+.navmenu{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background-color: rgb(22, 14, 66);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    top: -100%;
+    ;
+}
+.navmenu.active{
+    top: 0;
+    ;
+}
+.navmenu ul li{
+    list-style-type: none;
+    background-color: #fff;
+    margin: 20px 0;
+    height: 5vh;
+    width: 50vh;
+    border-radius: 5vh;
+    box-shadow: 0 0 2px 1px #fff;
+    text-align: center;
+    ;
+}
+.navmenu ul li a{
+    line-height: 5vh;
+    color: #000;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    border-radius: 5vh;
+    transition: all 0.5s;
+    ;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linked css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Shakib</title>
+</head>
+<body>
+    <div class="navbar">
+        <!-- display onclick hambtn -->
+        <div id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">services</a></li>
+            </ul>
+        </div>
+        <div class="brand">
+            <a href="#">shakib</a>
+        </div>
+        <div id="ham" class="hamburger">
+            <span></span>
+        </div>
+    </div>
+    <!--  -->
+    <script>
+        var btn=document.getElementById("ham");
+        var navmenu=document.querySelector(".navmenu");
+        btn.addEventListener("click", cons);
+        function cons(){
+            navmenu.classList.toggle("active")
+        }
+    </script>
+</body>
+</html>
